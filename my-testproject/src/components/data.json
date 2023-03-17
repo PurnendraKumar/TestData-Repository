@@ -1,0 +1,35 @@
+{
+    "result": [
+        {
+            "rowno": "1",
+            "code": " import java.io.IOException; \n import org.apache.pdfbox.pdmodel.PDDocument; \n import org.apache.pdfbox.pdmodel.PDPage; \n public classCreatePdf  \n { \n public static void main(String args[]) throws IOException  \n { \n PDDocument pdfdoc= new PDDocument(); \n pdfdoc.addPage(new PDPage()); \n //path where the PDF file will be store \n pdfdoc.save(\"C:\\Users\\Anubhav\\Desktop\\Java PDF\\Sample.pdf\"); \n //prints the message if the PDF is created successfully  \n System.out.println(\"PDF created\"); \n //closes the document \n pdfdoc.close(); \n } \n} " 
+            ,
+            "description": "Java program to Create Pdf using Apache PDFBox",
+            "codeHeight": "200px",
+            "buttonText": "Expand",
+            "nooflines": "167",
+            "language": "Java"
+        },
+        {
+            "rowno": "2",
+            "code":  "package com.create.pdf; \n import java.io.File; \n import java.io.IOException; \n import org.apache.pdfbox.pdmodel.PDDocument; \n import org.apache.pdfbox.text.PDFTextStripper; \n public class ReadPdfBox { \n public static void main(String[] args) throws IOException { \n // Loading an existing document \n File file = new File(\"C:/Users/a829246/Desktop/ARAA/GenPDF/Motivation.pdf\"); \n PDDocument doc = PDDocument.load(file); \n // Instantiate PDFTextStripper class \n PDFTextStripper pdfStripper = new PDFTextStripper(); \n // Retrieving text from PDF document \n String text = pdfStripper.getText(doc); \n System.out.println(\"Text in PDF\n---------------------------------\"); \n System.out.println(text); \n // Closing the document \n doc.close(); \n } \n } \n ",
+            "description": "Java program to Read Pdf using Apache PDFBox",
+            "codeHeight": "200px",
+            "buttonText": "Expand",
+            "nooflines": "28",
+            "language": "Java"
+        },
+        {
+            "rowno": "3",
+            "code":  " package com.create.pdf; \n import java.io.FileNotFoundException; \n import java.io.FileOutputStream; \n import com.itextpdf.text.Document; \n import com.itextpdf.text.DocumentException; \n import com.itextpdf.text.Paragraph; \n import com.itextpdf.text.pdf.PdfWriter; \n public class GeneratePdf { \n public static void main(String[] args) { \n Document doc = new Document(); \n try { \n // generate a PDF at the specified location \n PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream(\"C:\\Users\\a829246\\Desktop\\ARAA\\GenPDF\\Motivation.pdf\")); \n System.out.println(\"PDF created.\"); \n // opens the PDF \n doc.open(); \n // adds paragraph to the PDF file \n doc.add(new Paragraph(\"Hiii...paragraph has been generated using iText\")); \n // close the PDF file \n doc.close(); \n // closes the writer \n writer.close(); \n } catch (DocumentException e) { \ne.printStackTrace(); \n } catch (FileNotFoundException e) { \n e.printStackTrace(); \n } \n } \n } \n",
+            "description": "Java program to Create Pdf using iTextt",
+            "codeHeight": "200px",
+            "buttonText": "Expand",
+            "nooflines": "36",
+            "language": "Java"
+        }
+
+        
+
+    ]
+}
